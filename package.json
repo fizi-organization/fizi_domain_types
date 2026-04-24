@@ -1,0 +1,23 @@
+{
+  "name": "@fizi/domain-types",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Shared domain TypeScript contracts for Fizi clients.",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts"
+    }
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "exercicios.d.ts",
+    "programas.d.ts",
+    "README.md"
+  ],
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
+  }
+}
