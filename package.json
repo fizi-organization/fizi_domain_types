@@ -1,6 +1,6 @@
 {
   "name": "@fizi/domain-types",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "Shared domain TypeScript contracts for Fizi clients.",
   "sideEffects": false,
@@ -14,6 +14,11 @@
     "index.d.ts",
     "exercicios.d.ts",
     "programas.d.ts",
+    "appointments.d.ts",
+    "chat.d.ts",
+    "notifications.d.ts",
+    "physio.d.ts",
+    "patients.d.ts",
     "README.md"
   ]
 }
