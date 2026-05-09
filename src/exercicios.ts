@@ -20,6 +20,8 @@ export interface ExercicioResumo {
   id: number;
   slug: string;
   nome: string;
+  motion_exercise_id: string | null;
+  thumbnail_url: string | null;
 }
 
 export interface AssetVideoExercicioResumo {
@@ -41,7 +43,7 @@ export interface AssetVideoExercicio {
   playback_policy: PoliticaPlaybackAssetVideo;
   status: StatusAssetVideo;
   thumbnail_url: string | null;
-  source_url: string | null;
+  source_url?: string | null;
   duration_seconds: number | null;
   resolution: string | null;
   version: number;
@@ -70,6 +72,18 @@ export interface VideoResolvidoExercicio {
   provider: ProvedorAssetVideo;
   playback_id: string | null;
   playback_policy: PoliticaPlaybackAssetVideo;
+  stream_url: string | null;
+  status: StatusAssetVideo;
+  thumbnail_url: string | null;
+  duration_seconds: number | null;
+}
+
+export interface PlaybackAssetVideoExercicio {
+  asset_id: number;
+  exercise_id: number;
+  provider: ProvedorAssetVideo;
+  playback_policy: PoliticaPlaybackAssetVideo;
+  stream_url: string | null;
   status: StatusAssetVideo;
   thumbnail_url: string | null;
   duration_seconds: number | null;
@@ -83,6 +97,7 @@ export interface VideoExercicioPaciente {
   duration_seconds: number;
   exercise_id: number | null;
   exercise_slug: string | null;
+  motion_exercise_id: string | null;
   resolved_video: VideoResolvidoExercicio | null;
   materiais: MaterialResumo[];
 }

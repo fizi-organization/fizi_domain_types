@@ -61,6 +61,7 @@ export interface ProgramaPresetResumo {
   is_padrao: boolean;
   ativo: boolean;
   fisioterapeuta_nome: string | null;
+  can_edit: boolean;
   updated_at: string;
 }
 
@@ -71,6 +72,8 @@ export interface ProgramaPresetDetalhe {
   foco: string | null;
   is_padrao: boolean;
   ativo: boolean;
+  fisioterapeuta_nome: string | null;
+  can_edit: boolean;
   dias: ProgramaPresetDia[];
   created_at: string;
   updated_at: string;
