@@ -10,9 +10,11 @@ export type CanalNotificacao = 'internal' | 'email';
 export interface NotificacaoFisio {
   id: number;
   title: string;
-  body: string;
-  is_read: boolean;
-  created_at: string;
+  description: string;
+  createdAt: string;
+  channel: CanalNotificacao;
+  read: boolean;
+  kind: TipoNotificacao | 'message';
   targetType: TipoNotificacao | null;
   targetId: number | null;
 }
@@ -20,9 +22,11 @@ export interface NotificacaoFisio {
 export interface NotificacaoPaciente {
   id: number;
   title: string;
-  body: string;
-  is_read: boolean;
-  created_at: string;
+  description: string;
+  createdAt: string;
+  channel: CanalNotificacao;
+  read: boolean;
+  kind: 'appointment' | 'chat' | 'message' | 'program' | 'generic';
   targetType: 'appointment' | 'chat' | 'program' | null;
   targetId: number | null;
 }

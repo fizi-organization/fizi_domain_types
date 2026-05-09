@@ -9,10 +9,10 @@ export interface FisioterapeutaResumo {
 
 export interface SessaoFisioterapeuta {
   id?: number | null;
-  nome: string;
+  nome?: string | null;
   crefito?: string | null;
   email?: string | null;
   firebase_uid?: string | null;
-  role: RoleFisio;
+  role?: RoleFisio | string | null;
   is_authenticated: boolean;
 }
