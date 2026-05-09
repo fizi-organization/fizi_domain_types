@@ -12,5 +12,8 @@ import 'dotenv/config';
       console.error('Auth Error!', err);
     }
 })();
+
+
 export * from './exercicios';
+
 export * from './programas';
