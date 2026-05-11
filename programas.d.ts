@@ -8,7 +8,7 @@ export type StatusDiaProgramaSemanal = 'scheduled' | 'review' | 'done';
 
 export type StatusProgramaPaciente = 'rascunho' | 'publicado' | 'arquivado';
 
-export type StatusDiaProgramaPaciente = 'agendado' | 'em_revisao' | 'concluido';
+export type StatusDiaProgramaPaciente = 'agendado' | 'rascunho';
 
 export interface DiaProgramaSemanalLeitura {
   id: number;
@@ -94,6 +94,7 @@ export interface ProgramaPacienteDia {
   id: number;
   weekday: string;
   dia_da_semana: number;
+  data_agendada: string | null;
   titulo: string;
   status: StatusDiaProgramaPaciente;
   ordem: number;
@@ -105,9 +106,13 @@ export interface ProgramaPacienteResumo {
   titulo: string;
   foco: string | null;
   status: StatusProgramaPaciente;
+  data_agendada: string | null;
+  treino_status: StatusDiaProgramaPaciente;
   paciente_nome: string;
   preset_origem_titulo: string | null;
   updated_at: string;
+  atividades_count?: number;
+  atividades_concluidas_count?: number;
 }
 
 export interface ProgramaPacienteDetalhe {
@@ -116,6 +121,8 @@ export interface ProgramaPacienteDetalhe {
   foco: string | null;
   observacoes: string | null;
   status: StatusProgramaPaciente;
+  data_agendada: string | null;
+  treino_status: StatusDiaProgramaPaciente;
   paciente: number;
   paciente_nome: string;
   preset_origem: number | null;
