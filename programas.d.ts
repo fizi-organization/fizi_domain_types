@@ -79,31 +79,6 @@ export interface ProgramaPresetDetalhe {
   updated_at: string;
 }
 
-export interface ProgramaPresetAtividadeWriteInput {
-  exercicio: number;
-  series?: number | null;
-  repeticoes?: number | null;
-  tempo_descanso_segundos?: number | null;
-  observacoes?: string | null;
-  ordem?: number;
-}
-
-export interface ProgramaPresetDiaWriteInput {
-  dia_da_semana: number;
-  titulo: string;
-  ordem?: number;
-  atividades: ProgramaPresetAtividadeWriteInput[];
-}
-
-export interface ProgramaPresetWriteInput {
-  titulo: string;
-  descricao: string | null;
-  foco: string | null;
-  is_padrao?: boolean;
-  ativo: boolean;
-  dias?: ProgramaPresetDiaWriteInput[];
-}
-
 export interface ProgramaPacienteAtividade {
   id: number;
   exercicio: ExercicioResumo;
