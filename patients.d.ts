@@ -1,3 +1,5 @@
+import type { EvaHistoricoItem, SentimentoHistoricoItem } from './gamificacao';
+
 export interface PacienteResumo {
   id: number;
   nome: string;
@@ -17,4 +19,11 @@ export interface PacienteFisioResumo extends PacienteResumo {
   sessoes_total: number;
   adesao_pct: number | null;
   dor_eva_ultimo: number | null;
+  ultimo_checkin_data: string | null;
+}
+
+export interface PacienteFisioDetalhe extends PacienteFisioResumo {
+  avaliacao_recente: number | null;
+  eva_historico: EvaHistoricoItem[];
+  sentimento_historico: SentimentoHistoricoItem[];
 }
