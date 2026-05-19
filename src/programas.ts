@@ -1,34 +1,8 @@
 import type { AssetVideoExercicioResumo, ExercicioResumo, VideoExercicioPaciente } from './exercicios';
 
-export type StatusDiaProgramaSemanal = 'scheduled' | 'review' | 'done';
-
 export type StatusProgramaPaciente = 'rascunho' | 'publicado' | 'arquivado';
 
 export type StatusDiaProgramaPaciente = 'agendado' | 'rascunho';
-
-export interface DiaProgramaSemanalLeitura {
-  id: number;
-  weekday: string;
-  title: string;
-  activities: string[];
-  status: StatusDiaProgramaSemanal;
-}
-
-export interface ProgramaSemanalResumoLeitura {
-  id: number;
-  patientName: string;
-  focus: string;
-  adherenceLabel: string;
-  updatedAt: string;
-}
-
-export interface ProgramaSemanalDetalheLeitura {
-  id: number;
-  patientName: string;
-  focus: string;
-  notes: string;
-  days: DiaProgramaSemanalLeitura[];
-}
 
 export interface ProgramaPresetAtividade {
   id: number;
