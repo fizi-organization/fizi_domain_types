@@ -29,10 +29,18 @@ export interface Mensagem {
   created_at: string;
 }
 
+export interface MensagemFisioReplyTo {
+  id: number;
+  authorName: string;
+  body: string;
+  sentAt: string;
+}
+
 export interface MensagemFisio {
   id: number;
   authorName: string;
   direction: DirecaoMensagem;
   body: string;
   sentAt: string;
+  replyTo?: MensagemFisioReplyTo | null;
 }
