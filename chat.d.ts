@@ -11,6 +11,7 @@ export interface Conversa {
 
 export interface ConversaFisio {
   id: number;
+  patient_id: number;
   patientName: string;
   physioName: string;
   physioSubtitle: string;
