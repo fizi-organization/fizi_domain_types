@@ -36,6 +36,13 @@ export interface MensagemFisioReplyTo {
   sentAt: string;
 }
 
+export interface ChatAttachment {
+  id: number;
+  filename: string;
+  content_type: string;
+  size_bytes: number;
+}
+
 export interface MensagemFisio {
   id: number;
   authorName: string;
@@ -43,4 +50,5 @@ export interface MensagemFisio {
   body: string;
   sentAt: string;
   replyTo?: MensagemFisioReplyTo | null;
+  attachments: ChatAttachment[];
 }
